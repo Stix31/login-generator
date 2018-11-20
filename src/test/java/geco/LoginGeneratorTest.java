@@ -10,11 +10,12 @@ public class LoginGeneratorTest {
 
     private LoginService loginService;
     private LoginGenerator loginGenerator;
-    private String prenom;
     private String nom;
-    private String prenom2;
+    private String prenom;
     private String nom2;
+    private String prenom2;
     private String nom3;
+    private String prenom3;
     public String PaulDupongLog = "PDUP";
     public String PierreDupardLog = "PDUP1";
     public String JacquesDurantLog = "JDUR";
@@ -23,11 +24,12 @@ public class LoginGeneratorTest {
 
     @Before
     public void setup() {
-        prenom = "Paul";
         nom = "Dupond";
+        prenom = "Paul";
+        nom2 = "Durant";
         prenom2 = "Pierre";
-        nom2 = "Dupard";
-        nom3 = "Durant";
+        nom3 = "Rolling";
+        prenom3 = "Jean";
         loginService = new LoginService(liste);
         loginGenerator = new LoginGenerator(loginService);
     }
@@ -37,16 +39,20 @@ public class LoginGeneratorTest {
         // given
         String nomPaul;
         String prenomPaul;
+        String nomRolling;
+        String prenomJean;
         String retour;
         String retour2;
         // when
-        nomPaul = nom3;
+        nomPaul = nom;
         prenomPaul = prenom;
+        nomRolling = nom3;
+        prenomJean = prenom3;
         retour = loginGenerator.generateLoginForNomAndPrenom(nomPaul,prenomPaul);
-        retour2 = loginGenerator.generateLoginForNomAndPrenom(nomPaul,prenomPaul);
+        retour2 = loginGenerator.generateLoginForNomAndPrenom(nomRolling,prenomJean);
 
         // then
-        Assert.assertEquals("PDUR", retour);
-        Assert.assertEquals("PDUR1", retour2);
+        Assert.assertEquals("PDUP", retour);
+        Assert.assertEquals("JROL2", retour2);
     }
 }
