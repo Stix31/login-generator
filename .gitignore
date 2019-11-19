@@ -1,6 +1,7 @@
 *.class
-target/
-.idea/
+target/*
+.idea/*
 .idea/vcs.xml
 *.iml
 Thomas
+Old_src/*

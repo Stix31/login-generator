@@ -47,7 +47,7 @@ public class LoginService {
      * @return la liste des logins prefixes par <em>pref</em>
      */
     public List<String> findAllLoginsStartingWith(String pref) {
-        ArrayList<String> loginsPrefixes = new ArrayList<String>();
+        ArrayList<String> loginsPrefixes = new ArrayList<>();
         for (String login: loginsExistants) {
             if (login.startsWith(pref)) {
                 loginsPrefixes.add(login);
