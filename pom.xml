@@ -6,7 +6,7 @@
 
   <groupId>geco</groupId>
   <artifactId>login-generator</artifactId>
-  <version>1.1.0</version>
+  <version>1.1.1</version>
 
   <name>login-generator</name>
   <url>https://github.com/Stix31/login-generator</url>
@@ -18,6 +18,11 @@
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>com.github.Stix31</groupId>
+      <artifactId>login-generator</artifactId>
+      <version>1.1.0</version>
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -119,4 +124,15 @@
 
     </plugins>
   </reporting>
+  <repositories>
+    <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+    </repository>
+      <repository>
+          <id>jitpack.io</id>
+          <url>https://jitpack.io</url>
+      </repository>
+  </repositories>
 </project>
+

@@ -16,6 +16,7 @@ public class LoginGeneratorTest {
     private String prenom2;
     private String nom3;
     private String prenom3;
+    private String nom4;
     public String PaulDupongLog = "PDUP";
     public String PierreDupardLog = "PDUP1";
     public String JacquesDurantLog = "JDUR";
@@ -30,6 +31,7 @@ public class LoginGeneratorTest {
         prenom2 = "Pierre";
         nom3 = "Rolling";
         prenom3 = "Jean";
+        nom4 = "Du";
         loginService = new LoginService(liste);
         loginGenerator = new LoginGenerator(loginService);
     }
@@ -41,18 +43,23 @@ public class LoginGeneratorTest {
         String prenomPaul;
         String nomRolling;
         String prenomJean;
+        String nomDu;
         String retour;
         String retour2;
+        String retour3;
         // when
         nomPaul = nom;
         prenomPaul = prenom;
         nomRolling = nom3;
         prenomJean = prenom3;
+        nomDu = nom4;
         retour = loginGenerator.generateLoginForNomAndPrenom(nomPaul,prenomPaul);
         retour2 = loginGenerator.generateLoginForNomAndPrenom(nomRolling,prenomJean);
+        retour3 = loginGenerator.generateLoginForNomAndPrenom(nomDu,prenomPaul);
 
         // then
         Assert.assertEquals("PDUP", retour);
         Assert.assertEquals("JROL2", retour2);
+        Assert.assertEquals("PDU", retour3);
     }
 }

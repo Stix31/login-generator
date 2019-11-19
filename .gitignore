@@ -1,4 +1,6 @@
 *.class
 target/
 .idea/
+.idea/vcs.xml
 *.iml
+Thomas
