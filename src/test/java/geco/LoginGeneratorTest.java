@@ -4,11 +4,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class LoginGeneratorTest {
-  LoginGenerator loginGenerator;
-  LoginService loginService;
+  private LoginService loginService;
   @Before
   public void setup () {
     loginService = new LoginService(new String[] {"JROL",
@@ -17,7 +14,7 @@ public class LoginGeneratorTest {
   @Test
   public void generateLoginForNomAndPrenom() {
     // When
-    loginGenerator = new LoginGenerator(loginService);
+    LoginGenerator loginGenerator = new LoginGenerator(loginService);
     // Given
     String nom = "Dupond";
     String prenom = "Paul";
