@@ -19,9 +19,9 @@ public class LoginGeneratorTest {
     // When
     loginGenerator = new LoginGenerator(loginService);
     // Given
-    String nom = "Durant";
-    String prenom = "Paul";
+    String nom = "Ralling";
+    String prenom = "John";
     // Then
-    Assert.assertEquals("PDUR", loginGenerator.generateLoginForNomAndPrenom("Durant", "Paul"));
+    Assert.assertEquals("JRAL2", loginGenerator.generateLoginForNomAndPrenom(nom, prenom));
   }
 }
